@@ -57,4 +57,12 @@
         </plugins>
     </build>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.strapdata.elasticsearch</groupId>
+            <artifactId>dev-tools</artifactId>
+            <version>2.4.5</version>
+        </dependency>
+    </dependencies>
+
 </project>

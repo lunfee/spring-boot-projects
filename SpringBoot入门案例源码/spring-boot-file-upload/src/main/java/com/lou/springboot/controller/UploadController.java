@@ -15,8 +15,8 @@ import java.util.Random;
 @Controller
 public class UploadController {
 
-    //private final static String FILE_UPLOAD_PATH = "D:\\upload\\";
-    private final static String FILE_UPLOAD_PATH = "/home/project/upload/";
+    private final static String FILE_UPLOAD_PATH = "C:\\Users\\lunfee\\Desktop\\";
+//    private final static String FILE_UPLOAD_PATH = "/home/project/upload/";
 
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     @ResponseBody
@@ -40,6 +40,7 @@ public class UploadController {
 
         } catch (IOException e) {
             e.printStackTrace();
+            return "服务器错误，上传失败";
         }
         return "上传成功，图片地址为：/files/" + newFileName;
     }

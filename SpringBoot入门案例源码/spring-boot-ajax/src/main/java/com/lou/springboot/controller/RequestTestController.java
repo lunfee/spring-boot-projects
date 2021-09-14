@@ -2,6 +2,7 @@ package com.lou.springboot.controller;
 
 import com.lou.springboot.entity.User;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,8 +11,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping(value = "/api")
 public class RequestTestController {
+
+    @GetMapping("/lunfee")
+    public String getString(){
+        return"lunfee";
+    }
+
 
     @RequestMapping(value = "/test1", method = RequestMethod.GET)
     public String test1(String info) {
